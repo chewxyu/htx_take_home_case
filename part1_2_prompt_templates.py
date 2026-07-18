@@ -1,6 +1,6 @@
 RAG_PROMPT_PART1 = """
 <documents>
-{rag_docs}
+{context}
 </documents>
 
 <instructions>
@@ -17,51 +17,22 @@ Do not use any knowledge outside the documents. Do not make plausible guesses.
 
 If the user specifies a section or table, focus primarily on that section or table.
 If the user specifies a year, focus primarily on that specific year instead of other years.
-Always use revised numbers, data or valuees estimated numbers for that same year, unless specified.
+If not specified, use revised over actual numbers, data or values for each year.
+If actual numbers are requested, but only revised numbers are found, use revised numbers.
 
 Return JSON inside <result> tags.
 JSON results must follow the format specified inside <format> tags.
 </instructions>
 
 <format>
-{
-    "answer": "string, float, or null"
-}
+{{
+    "full_answer": "string, or null"
+    "number_answer": "float, or null"
+    "list_answer": "list of strings, or null"
+}}
 </format>
 
 <question>
-{query}
+{input}
 </question>
 """
-
-# <format>
-# {
-#   "is_meeting": true,
-#   "title": "string",
-#   "start": "ISO-8601 with timezone",
-#   "end": "ISO-8601 with timezone",
-#   "attendees": ["string"],
-#   "location": "string or null",
-#   "notes": "string or null"
-# }
-# </format>
-
-# <format>
-# {
-#   "vendor_name": "string or null",
-#   "vendor_tax_id": "string or null",
-#   "invoice_number": "string or null",
-#   "issue_date": "YYYY-MM-DD or null",
-#   "due_date": "YYYY-MM-DD or null",
-#   "currency": "ISO-4217 code",
-#   "subtotal": 0.0,
-#   "tax": 0.0,
-#   "total": 0.0,
-#   "totals_inconsistent": false,
-#   "line_items": [
-#     { "description": "string", "quantity": 1, "unit_price": 0.0, "amount": 0.0 }
-#   ]
-# }
-# </format>
-
-# - Dates must be ISO-8601 (YYYY-MM-DD). Convert if the source uses another format
