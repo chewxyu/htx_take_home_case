@@ -1,2 +1,11 @@
 chunk_size: 800
 chunk_overlap: 200
+
+collection_name: fy2024_doc
+chroma_dir: chromadb_persist
+
+bm25_index_path: bm25_index.pkl
+
+retrieval_k: 6
+min_relevance: 0.3
+vector_search_weightage: 0.8
