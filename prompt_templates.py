@@ -10,7 +10,7 @@ Procedure:
 1. Reason inside <thinking>. List facts that are stated in the documents. Quote them.
 2. Decide whether those facts are sufficient to answer the question.
 3. If yes — answer concisely inside <answer>, cite the source and page number for each claim, and the table name if available.
-5. If no — return exactly inside <answer>:
+4. If no — return exactly inside <answer>:
    "There is not enough information in the provided sources to answer the question."
 
 Rules:

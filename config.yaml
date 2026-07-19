@@ -6,6 +6,8 @@ chroma_dir: chromadb_persist
 
 bm25_index_path: bm25_index.pkl
 
+mcp_server_url: 'http://localhost:8866/mcp'
+
 retrieval_k: 8
 min_relevance: 0.3
 vector_search_weightage: 0.8
