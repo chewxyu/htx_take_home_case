@@ -78,10 +78,9 @@ Use these values directly as the status field — do not relabel or reinterpret 
 </step>
 
 <step number="4" name="format_output">
-Return ONLY a JSON array (no prose, no markdown fences, no explanation) where each
-element has exactly these keys: "original_text", "normalized_date", "status".
-Preserve the order the dates were extracted in. Example of the expected format:
+Return ONLY the raw JSON array (no prose, no markdown fences, no explanation, no ```) where each element has exactly these keys: "original_text", "normalized_date", "status".
 
+Preserve the order the dates were extracted in. Example of the expected format:
 [
   {{"original_text": "Distributed on: 16 February 2024", "normalized_date": "2024-02-16", "status": "Upcoming"}},
   {{"original_text": "deadline of application 2 May 2008", "normalized_date": "2008-05-02", "status": "Expired"}},

@@ -32,5 +32,5 @@ def compare_dates(date_str:str, reference_date:str='2024-01-01', date_format:str
 
     return label
 
-if __name__ == "__main__":
-    mcp_server.run(transport="http", host="localhost", port=8866)
+if __name__ == '__main__':
+    mcp_server.run(transport='http', host='localhost', port=8866)
