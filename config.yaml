@@ -6,6 +6,6 @@ chroma_dir: chromadb_persist
 
 bm25_index_path: bm25_index.pkl
 
-retrieval_k: 6
+retrieval_k: 8
 min_relevance: 0.3
 vector_search_weightage: 0.8
