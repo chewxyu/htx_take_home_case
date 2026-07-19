@@ -30,5 +30,5 @@ def compare_dates(date_str:str, reference_date:str='2024-01-01', date_format:str
 
 
 # if __name__ == "__main__":
-#     test = compare_dates(["2024-02-15", "2023-05-10", "2025-02-02", "2024-01-01"])
+#     test = compare_dates("2024-02-15")
 #     print(test)

@@ -18,7 +18,7 @@ Do not use any knowledge outside the documents. Do not make plausible guesses.
 If the user specifies a section or table, focus primarily on that section or table.
 If the user specifies a year, focus primarily on that specific year instead of other years.
 If not specified, use revised over actual numbers, data or values for each year.
-If actual numbers are requested, but only revised numbers are found, use revised numbers.
+Consider "Revised" as equivalent to "Actual".
 Dates must be ISO-8601 (YYYY-MM-DD) format. Convert if the source uses another format.
 
 Return JSON inside <result> tags.
@@ -30,7 +30,6 @@ JSON results must follow the format specified inside <format> tags.
     "full_answer": "string, or null"
     "number_answer": "float, or null"
     "list_answer": "list of strings, or null"
-    "date_answer": "list of dates (YYYY-MM-DD) or null"
 }}
 </format>
 
